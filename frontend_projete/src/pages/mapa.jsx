@@ -261,31 +261,14 @@ export default function Mapa() {
 
     atual.fitBounds(BRASIL);
 
-    // Satélite: acima do zoom 16 a Esri não tem imagem em boa parte do
-    // interior (o mapa "sumia" em branco). maxNativeZoom faz o Leaflet
-    // ampliar o último nível disponível em vez de pedir tiles inexistentes.
     const satelite = L.tileLayer(
-      "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
-      {
-        attribution: "Tiles © Esri",
-        maxZoom: 17,
-        maxNativeZoom: 18,
-      }
-    ).addTo(atual);
-
-    const ruas = L.tileLayer(
-      "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-      {
-        attribution: "© OpenStreetMap",
-        maxZoom: 17,
-      }
-    );
-
-    L.control
-      .layers({ "Satélite": satelite, "Mapa": ruas }, null, {
-        position: "topright",
-      })
-      .addTo(atual);
+  "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+  {
+    attribution: "Tiles © Esri",
+    maxZoom: 17,
+    maxNativeZoom: 18,
+  }
+).addTo(atual);
 
     // Recalcula o tamanho sempre que o espaço do mapa muda (girar o
     // celular, barra do navegador subindo/descendo, painéis abrindo).

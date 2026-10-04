@@ -432,7 +432,7 @@ function FormNovoUsuario({ perfilInicial, ocupado, erro, aoEnviar }) {
         />
       </Campo>
 
-      <Campo rotulo="Senha provisória" ajuda="Use pelo menos 6 caracteres.">
+      <Campo rotulo="Senha" ajuda="Use pelo menos 6 caracteres.">
         <div className="cooperativa-senha">
           <input
             type={mostrarSenha ? "text" : "password"}
