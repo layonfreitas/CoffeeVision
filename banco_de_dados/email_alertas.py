@@ -7,7 +7,9 @@ from collections import defaultdict
 from contextlib import closing
 from html import escape
 from email_utils import enviar_email, _moldura_html
+from dotenv import load_dotenv
 
+load_dotenv()
 log = logging.getLogger(__name__)
 
 
@@ -15,6 +17,8 @@ def notificar_alertas(conexao, lista):
     """Recebe as tuplas validadas de insert_alerta, após salvar os alertas."""
     frontend_url = os.getenv("FRONTEND_URL", "").strip().rstrip("/")
     endereco = urlsplit(frontend_url)
+
+    print(f"FRONTEND_URL: {frontend_url} (scheme={endereco.scheme}, netloc={endereco.netloc})")
 
     if (
         endereco.scheme not in ("https", "http")
@@ -256,4 +260,7 @@ def notificar_alertas(conexao, lista):
                     uid,
                 )
 
+
+
     return resumo
+
