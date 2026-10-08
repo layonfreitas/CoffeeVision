@@ -31,8 +31,7 @@ ORIGENS_PERMITIDAS = [
 _frontend_url = os.getenv("FRONTEND_URL", "").strip().rstrip("/")
 if _frontend_url and _frontend_url not in ORIGENS_PERMITIDAS:
     ORIGENS_PERMITIDAS.append(_frontend_url)
-
-CORS(app, origins=ORIGENS_PERMITIDAS)
+CORS(app, resources={r"/*": {"origins": ORIGENS_PERMITIDAS}})
 
 mysql = MySQL(app)  
 
