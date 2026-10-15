@@ -13,7 +13,7 @@
 
 ## 🏆 Sobre o projeto
 
-O CoffeeVision foi desenvolvido para o **Projete 2026** e [**<-- escreva aqui a premiação / colocação**].
+O CoffeeVision foi desenvolvido para a 46ª Projete (2026) e recebeu o Prêmio Municipal de Inovação, concedido pela Prefeitura de Santa Rita do Sapucaí.
 
 Pequenos produtores raramente têm acesso à agricultura de precisão, e problemas como estresse hídrico, doenças e clima adverso costumam ser percebidos tarde demais. O CoffeeVision junta dados que normalmente ficam espalhados e os traduz em **alertas em português claro** e ações práticas. A decisão final continua sendo do produtor.
 
